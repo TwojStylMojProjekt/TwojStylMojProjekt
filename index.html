@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twój Styl Mój Projekt</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e;
+      color: #fff;
+    }
+    header {
+      background: url('https://i.imgur.com/eDgRkkH.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+      color: #fff;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 280px;
+      margin: 10px;
+      border-radius: 8px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #f04e23;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    input[type="submit"] {
+      background-color: #f04e23;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Twój Styl Mój Projekt</h1>
+    <p>Profesjonalne grafiki w Twoim stylu</p>
+  </header>
+
+  <section>
+    <h2>O mnie</h2>
+    <p>Zajmuję się tworzeniem unikalnych projektów graficznych: logo, banerów, ulotek, wizytówek i więcej — dopasowanych dokładnie do Ciebie. Styl graffiti, biznesowy, nowoczesny lub naturalny? Zrobimy to.</p>
+  </section>
+
+  <section>
+    <h2>Moje prace</h2>
+    <div class="gallery">
+      <img src="https://i.imgur.com/VzpS6Jm.png" alt="Przykład grafiki">
+      <img src="https://i.imgur.com/ypmVoH0.png" alt="Przykład grafiki">
+      <img src="https://i.imgur.com/CV95NSD.png" alt="Przykład grafiki">
+    </div>
+  </section>
+
+  <section>
+    <h2>Skontaktuj się</h2>
+    <p>Masz pytanie? Zostaw wiadomość poniżej:</p>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Imię i nazwisko" required>
+      <input type="email" name="email" placeholder="Adres e-mail" required>
+      <textarea name="message" placeholder="Wiadomość" rows="5" required></textarea>
+      <input type="submit" value="Wyślij">
+    </form>
+    <p style="margin-top:20px">Lub napisz bezpośrednio:</p>
+    <p><strong>Facebook:</strong> <a href="https://www.facebook.com/TwojProjektMojStyl" target="_blank">TwojProjektMojStyl</a></p>
+    <p><strong>E-mail:</strong> kontakt@twojprojektmojstyl.pl</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Twój Styl Mój Projekt. Wszelkie prawa zastrzeżone.
+  </footer>
+</body>
+</html>
