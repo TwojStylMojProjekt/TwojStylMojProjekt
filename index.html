@@ -2,111 +2,136 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Twój Styl Mój Projekt</title>
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #1e1e1e;
-      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #181818;
+      color: #f0f0f0;
+      line-height: 1.6;
     }
     header {
-      background: url('https://i.imgur.com/eDgRkkH.jpg') no-repeat center center;
-      background-size: cover;
-      padding: 80px 20px;
+      background: url('https://i.imgur.com/N0UOzZT.jpg') no-repeat center center/cover;
+      padding: 100px 20px;
       text-align: center;
+      color: #fff;
     }
     header h1 {
-      font-size: 36px;
-      margin: 0;
-      color: #fff;
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 20px;
+      color: #ccc;
     }
     section {
-      padding: 40px 20px;
-      max-width: 900px;
+      padding: 50px 20px;
+      max-width: 1000px;
       margin: 0 auto;
     }
-    .gallery img {
-      width: 100%;
-      max-width: 280px;
-      margin: 10px;
-      border-radius: 8px;
+    .intro, .gallery, .contact {
+      margin-bottom: 50px;
     }
-    .gallery {
+    .styles {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-around;
+      gap: 20px;
     }
-    footer {
-      background: #111;
-      text-align: center;
+    .style-box {
+      flex: 1 1 250px;
+      background-color: #262626;
       padding: 20px;
-      font-size: 14px;
+      border-radius: 10px;
+      text-align: center;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #f04e23;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
+    .style-box img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .style-box h3 {
+      margin-bottom: 10px;
+      color: #f04e23;
     }
     form {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 15px;
     }
     input, textarea {
       padding: 10px;
       border-radius: 5px;
       border: none;
+      font-size: 16px;
     }
     input[type="submit"] {
       background-color: #f04e23;
       color: white;
+      font-weight: bold;
       cursor: pointer;
     }
+    footer {
+      background-color: #111;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+    a { color: #f04e23; text-decoration: none; }
+    a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <header>
     <h1>Twój Styl Mój Projekt</h1>
-    <p>Profesjonalne grafiki w Twoim stylu</p>
+    <p>Grafika reklamowa dopasowana do Twojego stylu</p>
   </header>
 
-  <section>
-    <h2>O mnie</h2>
-    <p>Zajmuję się tworzeniem unikalnych projektów graficznych: logo, banerów, ulotek, wizytówek i więcej — dopasowanych dokładnie do Ciebie. Styl graffiti, biznesowy, nowoczesny lub naturalny? Zrobimy to.</p>
+  <section class="intro">
+    <h2>Kim jesteśmy?</h2>
+    <p>Tworzymy grafiki reklamowe, logotypy, banery, ulotki i wizytówki dopasowane do Twojego stylu – graffiti, biznesowy, nowoczesny, lekki lub elegancki. Masz swój klimat? My go przeniesiemy na projekt.</p>
   </section>
 
-  <section>
-    <h2>Moje prace</h2>
-    <div class="gallery">
-      <img src="https://i.imgur.com/VzpS6Jm.png" alt="Przykład grafiki">
-      <img src="https://i.imgur.com/ypmVoH0.png" alt="Przykład grafiki">
-      <img src="https://i.imgur.com/CV95NSD.png" alt="Przykład grafiki">
+  <section class="gallery">
+    <h2>Style projektów</h2>
+    <div class="styles">
+      <div class="style-box">
+        <img src="https://i.imgur.com/0pMzxyd.png" alt="Styl biznesowy">
+        <h3>Biznesowy</h3>
+        <p>Profesjonalny wygląd i elegancka forma. Idealny dla firm.</p>
+      </div>
+      <div class="style-box">
+        <img src="https://i.imgur.com/U1w8NSk.png" alt="Styl graffiti">
+        <h3>Graffiti</h3>
+        <p>Mocny, uliczny klimat. Dla tych, którzy chcą się wyróżnić.</p>
+      </div>
+      <div class="style-box">
+        <img src="https://i.imgur.com/cdU09Ov.png" alt="Styl nowoczesny">
+        <h3>Nowoczesny</h3>
+        <p>Czysta estetyka i świeży styl. Dla kreatywnych projektów.</p>
+      </div>
     </div>
   </section>
 
-  <section>
+  <section class="contact">
     <h2>Skontaktuj się</h2>
-    <p>Masz pytanie? Zostaw wiadomość poniżej:</p>
+    <p>Masz pytanie lub chcesz zamówić projekt? Napisz do nas:</p>
     <form action="https://formspree.io/f/your-form-id" method="POST">
       <input type="text" name="name" placeholder="Imię i nazwisko" required>
       <input type="email" name="email" placeholder="Adres e-mail" required>
       <textarea name="message" placeholder="Wiadomość" rows="5" required></textarea>
       <input type="submit" value="Wyślij">
     </form>
-    <p style="margin-top:20px">Lub napisz bezpośrednio:</p>
+    <p style="margin-top:20px">Lub bezpośrednio:</p>
     <p><strong>Facebook:</strong> <a href="https://www.facebook.com/TwojProjektMojStyl" target="_blank">TwojProjektMojStyl</a></p>
     <p><strong>E-mail:</strong> kontakt@twojprojektmojstyl.pl</p>
   </section>
 
   <footer>
-    &copy; 2025 Twój Styl Mój Projekt. Wszelkie prawa zastrzeżone.
+    &copy; 2025 Twój Styl Mój Projekt – Wszystkie prawa zastrzeżone.
   </footer>
 </body>
 </html>
