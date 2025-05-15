@@ -1,65 +1,147 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Twój Styl Mój Projekt</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #181818;
-      color: #fff;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
     }
     header {
-      padding: 80px 20px;
+      background: linear-gradient(to right, #72cbe5, #ffffff);
+      color: #002f4b;
+      padding: 60px 20px;
       text-align: center;
-      background-color: #222;
     }
     header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-      color: #f04e23;
+      margin: 0;
+      font-size: 2.8em;
     }
     header p {
-      font-size: 18px;
-      color: #ccc;
+      font-size: 1.2em;
     }
     section {
       padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
     }
-    img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-top: 20px;
+    .services, .portfolio {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .box {
+      background: #e0f4fc;
+      border-radius: 8px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .box img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 15px;
     }
     footer {
-      background-color: #111;
+      background: #bce8f5;
       text-align: center;
       padding: 20px;
-      font-size: 14px;
+      font-size: 0.9em;
+    }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+      margin: auto;
+    }
+    .contact input, .contact textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+    .contact button {
+      background-color: #72cbe5;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1em;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .contact button:hover {
+      background-color: #5cb7d1;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Twój Styl Mój Projekt</h1>
-    <p>Grafika reklamowa dopasowana do Twojego stylu</p>
+    <p>Zaprojektuję w Twoim stylu</p>
+    <img src="images/baner-glowny.png" alt="Baner graficzny" width="300">
   </header>
 
   <section>
-    <h2>Transport – przykładowa grafika</h2>
-    <p>Sprawdź, jak może wyglądać banner reklamowy dla firmy transportowej:</p>
-    <img src="img/grafika_transportowa_1.png" alt="Grafika Transportowa">
+    <h2>O mnie</h2>
+    <p>Specjalizuję się w tworzeniu unikalnych projektów graficznych: logo, banerów, reklam i całej identyfikacji wizualnej. Łączę Twoją wizję z moim warsztatem.</p>
+  </section>
+
+  <section>
+    <h2>Usługi</h2>
+    <div class="services">
+      <div class="box">
+        <img src="images/logo.png" alt="Logo" />
+        <h3>Logo</h3>
+        <p>Tworzę nowoczesne logotypy dopasowane do branży i Twojego stylu.</p>
+      </div>
+      <div class="box">
+        <img src="images/banner.png" alt="Baner" />
+        <h3>Banery</h3>
+        <p>Projekty reklamowe pod Facebooka, Instagram, ulotki i strony.</p>
+      </div>
+      <div class="box">
+        <img src="images/socials.png" alt="Social media" />
+        <h3>Social media</h3>
+        <p>Szablony i grafiki do postów i relacji.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Portfolio</h2>
+    <div class="portfolio">
+      <div class="box">
+        <img src="images/projekt1.png" alt="Projekt 1">
+        <p>Grafika dla firmy transportowej</p>
+      </div>
+      <div class="box">
+        <img src="images/projekt2.png" alt="Projekt 2">
+        <p>Logo i reklama dla skupu złomu</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Kontakt</h2>
+    <form action="https://formspree.io/f/{your-id}" method="POST">
+      <input type="text" name="name" placeholder="Imię i nazwisko" required />
+      <input type="email" name="email" placeholder="Twój email" required />
+      <textarea name="message" rows="5" placeholder="Wiadomość..." required></textarea>
+      <button type="submit">Wyślij</button>
+    </form>
+    <p>Lub napisz bezpośrednio: <strong>kontakt@twojstylmojprojekt.pl</strong></p>
   </section>
 
   <footer>
     &copy; 2025 Twój Styl Mój Projekt. Wszystkie prawa zastrzeżone.
   </footer>
-
 </body>
 </html>
