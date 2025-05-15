@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="pl">
+<!DOCTYPE html><html lang="pl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,16 +12,15 @@
     }
     header {
       background: linear-gradient(to right, #72cbe5, #ffffff);
-      color: #002f4b;
-      padding: 60px 20px;
       text-align: center;
+      padding: 0;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.8em;
-    }
-    header p {
-      font-size: 1.2em;
+    header img {
+      width: 100%;
+      max-width: 1000px;
+      height: auto;
+      display: block;
+      margin: auto;
     }
     section {
       padding: 40px 20px;
@@ -84,52 +82,42 @@
 </head>
 <body>
   <header>
-    <h1>Twój Styl Mój Projekt</h1>
-    <p>Zaprojektuję w Twoim stylu</p>
-    <img src="images/baner-glowny.png" alt="Baner graficzny" width="300">
-  </header>
-
-  <section>
+    <img src="baner-glowny.png" alt="Baner główny" />
+  </header>  <section>
     <h2>O mnie</h2>
     <p>Specjalizuję się w tworzeniu unikalnych projektów graficznych: logo, banerów, reklam i całej identyfikacji wizualnej. Łączę Twoją wizję z moim warsztatem.</p>
-  </section>
-
-  <section>
+  </section>  <section>
     <h2>Usługi</h2>
     <div class="services">
       <div class="box">
-        <img src="images/logo.png" alt="Logo" />
+        <img src="logo.png" alt="Logo" />
         <h3>Logo</h3>
         <p>Tworzę nowoczesne logotypy dopasowane do branży i Twojego stylu.</p>
       </div>
       <div class="box">
-        <img src="images/banner.png" alt="Baner" />
+        <img src="banner.png" alt="Baner" />
         <h3>Banery</h3>
         <p>Projekty reklamowe pod Facebooka, Instagram, ulotki i strony.</p>
       </div>
       <div class="box">
-        <img src="images/socials.png" alt="Social media" />
+        <img src="socials.png" alt="Social media" />
         <h3>Social media</h3>
         <p>Szablony i grafiki do postów i relacji.</p>
       </div>
     </div>
-  </section>
-
-  <section>
+  </section>  <section>
     <h2>Portfolio</h2>
     <div class="portfolio">
       <div class="box">
-        <img src="images/projekt1.png" alt="Projekt 1">
+        <img src="projekt1.png" alt="Projekt 1">
         <p>Grafika dla firmy transportowej</p>
       </div>
       <div class="box">
-        <img src="images/projekt2.png" alt="Projekt 2">
+        <img src="projekt2.png" alt="Projekt 2">
         <p>Logo i reklama dla skupu złomu</p>
       </div>
     </div>
-  </section>
-
-  <section class="contact">
+  </section>  <section class="contact">
     <h2>Kontakt</h2>
     <form action="https://formspree.io/f/{your-id}" method="POST">
       <input type="text" name="name" placeholder="Imię i nazwisko" required />
@@ -138,9 +126,7 @@
       <button type="submit">Wyślij</button>
     </form>
     <p>Lub napisz bezpośrednio: <strong>kontakt@twojstylmojprojekt.pl</strong></p>
-  </section>
-
-  <footer>
+  </section>  <footer>
     &copy; 2025 Twój Styl Mój Projekt. Wszystkie prawa zastrzeżone.
   </footer>
 </body>
