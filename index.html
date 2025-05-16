@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Twój Styl Mój Projekt</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      color: #222;
+    }
+    header {
+      background: #87cefa;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .portfolio-item {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+    .opinie {
+      padding: 2rem;
+      background: #e6f2ff;
+    }
+    .opinie form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+      margin-bottom: 2rem;
+    }
+    .opinie input, .opinie textarea {
+      padding: 0.75rem;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .opinie button {
+      background: #007acc;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .opinie-lista {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .opinia {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Twój Styl Mój Projekt</h1>
+    <p>Indywidualne projekty graficzne z pasją</p>
+  </header>
+
+  <section class="portfolio">
+    <div class="portfolio-item">Projekt 1</div>
+    <div class="portfolio-item">Projekt 2</div>
+    <div class="portfolio-item">Projekt 3</div>
+    <div class="portfolio-item">Projekt 4</div>
+  </section>
+
+  <section class="opinie">
+    <h2>Dodaj opinię</h2>
+    <form id="formularz-opinii">
+      <input type="text" id="autor" placeholder="Twoje imię" required />
+      <textarea id="tresc" rows="4" placeholder="Napisz swoją opinię..." required></textarea>
+      <button type="submit">Wyślij opinię</button>
+    </form>
+
+    <div class="opinie-lista" id="opinie-lista"></div>
+  </section>
+
+  <script>
+    const formularz = document.getElementById('formularz-opinii');
+    const lista = document.getElementById('opinie-lista');
+
+    let opinie = JSON.parse(localStorage.getItem('opinie') || '[]');
+
+    function wyswietlOpinie() {
+      lista.innerHTML = '';
+      opinie.forEach(op => {
+        const div = document.createElement('div');
+        div.className = 'opinia';
+        div.innerHTML = `<strong>${op.autor}</strong><p>${op.tresc}</p>`;
+        lista.appendChild(div);
+      });
+    }
+
+    formularz.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const autor = document.getElementById('autor').value.trim();
+      const tresc = document.getElementById('tresc').value.trim();
+      if (autor && tresc) {
+        opinie.push({ autor, tresc });
+        localStorage.setItem('opinie', JSON.stringify(opinie));
+        wyswietlOpinie();
+        formularz.reset();
+      }
+    });
+
+    wyswietlOpinie();
+  </script>
+</body>
+</html>
