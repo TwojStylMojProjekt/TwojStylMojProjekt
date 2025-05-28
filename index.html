@@ -1,5 +1,4 @@
-<!DOCTYPE html><html lang="pl">
-<head>
+<!DOCTYPE html><html lang="pl"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Twój Styl Mój Projekt</title>
@@ -119,26 +118,35 @@
       z-index: 999;
     }
     .messenger-button img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
   </style>
 </head>
 <body>
   <header>
     <img src="baner-glowny.png" alt="Baner główny" />
-  </header>  <section id="o-mnie">
+  </header>
+  <section id="trailer" style="padding: 40px 20px; max-width: 1000px; margin: auto; text-align: center;">
+    <video width="100%" height="auto" controls autoplay muted playsinline style="border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+      <source src="trailer.mp4" type="video/mp4" />
+      Twój przeglądarka nie obsługuje odtwarzania wideo.
+    </video>
+  </section>
+  <section id="o-mnie">
     <h2>O mnie</h2>
     <div class="services">
       <div class="box">
         <p>Specjalizuję się w tworzeniu unikalnych projektów graficznych: logo, banerów, reklam i całej identyfikacji wizualnej. Łączę Twoją wizję z moim warsztatem.</p>
       </div>
     </div>
-  </section>  <section id="uslugi">
+  </section>
+  <section id="uslugi">
     <h2>Usługi</h2>
     <img src="uslugi-trio.png" alt="Usługi graficzne" style="width:100%; max-width:900px; display:block; margin:0 auto;">
-  </section>  <section id="portfolio">
+  </section>
+  <section id="portfolio">
     <h2>Portfolio</h2>
     <div class="portfolio-grid">
       <div class="box"><img src="portfolio.png" alt="DAF"><p>Grafika dla firmy transportowej (DAF)</p></div>
@@ -148,14 +156,16 @@
       <div class="box"><img src="portfolio4.png" alt="Flota DAF"><p>Ustawienie floty DAF na autostradzie</p></div>
       <div class="box"><img src="portfolio5.png" alt="Chwytak"><p>Koparka z chwytakiem ładująca złom</p></div>
     </div>
-  </section>  <section id="kontakt" class="contact">
+  </section>
+  <section id="kontakt" class="contact">
     <h2>Kontakt</h2>
     <div class="contact-link">
       <p>Skontaktuj się ze mną przez Facebooka:</p>
       <a href="https://www.facebook.com/profile.php?id=61575868348459" target="_blank">Przejdź do mojego profilu</a>
     </div>
     <img src="zamow-projekt.png" alt="Zamów projekt już teraz" style="width:100%; max-width:600px; display:block; margin:40px auto 0 auto;">
-  </section>  <section class="opinie" id="opinie">
+  </section>
+  <section class="opinie" id="opinie">
     <h2>Opinie klientów</h2>
     <form onsubmit="dodajOpinie(event)">
       <input type="text" id="imie" placeholder="Twoje imię" required>
@@ -164,55 +174,45 @@
     </form>
     <div class="opinie-list" id="opinie-list"></div>
   </section>
-  <section style="background-color: #e0f7fb; padding: 40px 20px; text-align: center;">
-    <h2 style="font-size: 28px; font-weight: bold; margin-bottom: 10px;">Zaprojektujemy w Twoim stylu</h2>
-    <div style="background-color: #1C6EA4; color: white; display: inline-block; padding: 10px 20px; border-radius: 10px; font-size: 20px; font-weight: bold; margin-bottom: 20px;">
-      TWOJ STYL MOJ PROJEKT
-    </div>
-    <br><br>
-    <video width="90%" controls style="border-radius: 20px;">
-      <source src="trailer.mp4" type="video/mp4">
-      Twoja przeglądarka nie obsługuje tagu wideo.
-    </video>
-  </section>
-
   <footer>
     &copy; 2025 Twój Styl Mój Projekt. Wszystkie prawa zastrzeżone.
-  </footer>  <a href="https://m.me/61575868348459" class="messenger-button" target="_blank">
+  </footer>
+  <a href="https://m.me/61575868348459" class="messenger-button" target="_blank">
     <img src="messenger-icon.png" alt="Messenger">
-  </a>  <script>
+  </a>
+  <script>
     function dodajOpinie(event) {
       event.preventDefault();
       const imie = document.getElementById('imie').value;
       const opinia = document.getElementById('opinia').value;
-      if (!imie || !opinia) return;
+      if (!imie || !opinia) return;const nowaOpinia = document.createElement('div');
+  nowaOpinia.className = 'opinie-item';
+  nowaOpinia.innerHTML = `<strong>${imie}</strong><p>${opinia}</p>`;
+  document.getElementById('opinie-list').prepend(nowaOpinia);
 
-      const nowaOpinia = document.createElement('div');
-      nowaOpinia.className = 'opinie-item';
-      nowaOpinia.innerHTML = `<strong>${imie}</strong><p>${opinia}</p>`;
-      document.getElementById('opinie-list').prepend(nowaOpinia);
+  document.getElementById('imie').value = '';
+  document.getElementById('opinia').value = '';
+}
 
-      document.getElementById('imie').value = '';
-      document.getElementById('opinia').value = '';
+if ('loading' in HTMLImageElement.prototype === false) {
+  document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+    img.setAttribute('loading', 'eager');
+  });
+}
+
+const sections = document.querySelectorAll("section");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Aktywna sekcja:", entry.target.id);
     }
+  });
+}, { threshold: 0.5 });
 
-    if ('loading' in HTMLImageElement.prototype === false) {
-      document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-        img.setAttribute('loading', 'eager');
-      });
-    }
+sections.forEach(section => {
+  observer.observe(section);
+});
 
-    const sections = document.querySelectorAll("section");
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          console.log("Aktywna sekcja:", entry.target.id);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  </script></body>
+  </script>
+</body>
 </html>
