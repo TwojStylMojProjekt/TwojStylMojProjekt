@@ -65,7 +65,7 @@
       loading: lazy;
     }
     .opinie {
-      background-color: #e0f7fb;
+      background-color: #bfe2ec;
       padding: 40px 20px;
       border-radius: 16px;
     }
@@ -103,6 +103,24 @@
     }
     .contact-link a:hover {
       background-color: #309cc7;
+    }
+    .messenger-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0084ff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+    .messenger-button img {
+      width: 30px;
+      height: 30px;
     }
   </style>
 </head>
@@ -146,7 +164,9 @@
     <div class="opinie-list" id="opinie-list"></div>
   </section>  <footer>
     &copy; 2025 Twój Styl Mój Projekt. Wszystkie prawa zastrzeżone.
-  </footer>  <script>
+  </footer>  <a href="https://m.me/61575868348459" class="messenger-button" target="_blank">
+    <img src="messenger-icon.png" alt="Messenger">
+  </a>  <script>
     function dodajOpinie(event) {
       event.preventDefault();
       const imie = document.getElementById('imie').value;
