@@ -49,42 +49,29 @@ h2 {
   justify-content: center;
 }
 
-/* NOWY UKŁAD PORTFOLIO */
+/* Zminimalizowane portfolio */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 16px;
   padding: 0 10px;
   justify-content: center;
 }
 
 .box {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .box img {
   width: 100%;
   max-height: 140px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  border-radius: 10px;
   cursor: zoom-in;
-}
-
-.box p {
-  font-size: 14px;
-  margin: 5px 0 0 0;
-  color: #333;
+  transition: transform 0.3s ease;
 }
 
 .opinie {
