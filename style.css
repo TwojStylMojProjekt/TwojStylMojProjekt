@@ -51,6 +51,45 @@ h2 {
   justify-content: center;
 }
 
+/* Nowa sekcja Usługi */
+.uslugi-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  text-align: center;
+}
+
+.usluga {
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.usluga:hover {
+  transform: translateY(-4px);
+}
+
+.usluga img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 12px;
+}
+
+.usluga h3 {
+  font-size: 1.2em;
+  margin: 0 0 10px;
+  color: #1976d2;
+}
+
+.usluga p {
+  font-size: 0.95em;
+  color: #333;
+}
+
 /* Portfolio */
 .portfolio-grid {
   display: grid;
