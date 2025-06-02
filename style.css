@@ -31,7 +31,9 @@ section {
   padding: 60px 20px;
   max-width: 1100px;
   margin: 20px auto;
-  background: rgba(191, 226, 236, 0.95);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border-radius: 16px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.05);
 }
@@ -75,7 +77,9 @@ h2 {
 }
 
 .opinie {
-  background-color: rgba(191, 226, 236, 0.95);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   padding: 40px 20px;
   border-radius: 16px;
 }
@@ -94,7 +98,9 @@ h2 {
 }
 
 footer {
-  background: rgba(198, 234, 246, 0.9);
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   text-align: center;
   padding: 20px;
   font-size: 0.9em;
