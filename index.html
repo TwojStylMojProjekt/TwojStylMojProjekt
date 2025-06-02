@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="pl"><head>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Twój Styl Mój Projekt</title>
@@ -6,17 +8,24 @@
     html {
       scroll-behavior: smooth;
     }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f0f9ff;
+      background-image: url('tlo.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
       color: #222;
     }
+
     header {
       background: linear-gradient(to right, #72cbe5, #d8f0ff);
       text-align: center;
       padding: 0;
     }
+
     header img {
       width: 100%;
       max-width: 1000px;
@@ -24,25 +33,29 @@
       display: block;
       margin: auto;
     }
+
     section {
       padding: 60px 20px;
       max-width: 1100px;
       margin: 20px auto;
-      background: #bfe2ec;
+      background: rgba(191, 226, 236, 0.95);
       border-radius: 16px;
       box-shadow: 0 3px 8px rgba(0,0,0,0.05);
     }
+
     h2 {
       color: #3a9dc4;
       text-align: center;
       margin-bottom: 30px;
     }
+
     .services, .portfolio-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
       justify-content: center;
     }
+
     .box {
       background: #ffffff;
       border-radius: 12px;
@@ -52,10 +65,12 @@
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .box:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 15px rgba(0,0,0,0.15);
     }
+
     .box img {
       width: 100%;
       height: auto;
@@ -63,15 +78,18 @@
       margin-bottom: 15px;
       loading: lazy;
     }
+
     .opinie {
-      background-color: #bfe2ec;
+      background-color: rgba(191, 226, 236, 0.95);
       padding: 40px 20px;
       border-radius: 16px;
     }
+
     .opinie form, .opinie-list {
       max-width: 600px;
       margin: 20px auto;
     }
+
     .opinie-item {
       background: #ffffff;
       padding: 15px;
@@ -79,18 +97,21 @@
       border-radius: 8px;
       margin-top: 15px;
     }
+
     footer {
-      background: #c6eaf6;
+      background: rgba(198, 234, 246, 0.9);
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
       border-radius: 16px;
       margin: 20px;
     }
+
     .contact-link {
       text-align: center;
       font-size: 1.1em;
     }
+
     .contact-link a {
       display: inline-block;
       background-color: #3fb7e3;
@@ -100,9 +121,11 @@
       border-radius: 6px;
       transition: background-color 0.3s ease;
     }
+
     .contact-link a:hover {
       background-color: #309cc7;
     }
+
     .messenger-button {
       position: fixed;
       bottom: 20px;
@@ -117,6 +140,7 @@
       justify-content: center;
       z-index: 999;
     }
+
     .messenger-button img {
       width: 100%;
       height: 100%;
@@ -185,34 +209,15 @@
       event.preventDefault();
       const imie = document.getElementById('imie').value;
       const opinia = document.getElementById('opinia').value;
-      if (!imie || !opinia) return;const nowaOpinia = document.createElement('div');
-  nowaOpinia.className = 'opinie-item';
-  nowaOpinia.innerHTML = `<strong>${imie}</strong><p>${opinia}</p>`;
-  document.getElementById('opinie-list').prepend(nowaOpinia);
+      if (!imie || !opinia) return;
+      const nowaOpinia = document.createElement('div');
+      nowaOpinia.className = 'opinie-item';
+      nowaOpinia.innerHTML = `<strong>${imie}</strong><p>${opinia}</p>`;
+      document.getElementById('opinie-list').prepend(nowaOpinia);
 
-  document.getElementById('imie').value = '';
-  document.getElementById('opinia').value = '';
-}
-
-if ('loading' in HTMLImageElement.prototype === false) {
-  document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-    img.setAttribute('loading', 'eager');
-  });
-}
-
-const sections = document.querySelectorAll("section");
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      console.log("Aktywna sekcja:", entry.target.id);
+      document.getElementById('imie').value = '';
+      document.getElementById('opinia').value = '';
     }
-  });
-}, { threshold: 0.5 });
-
-sections.forEach(section => {
-  observer.observe(section);
-});
-
   </script>
 </body>
 </html>
