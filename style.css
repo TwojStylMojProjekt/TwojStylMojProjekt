@@ -51,7 +51,7 @@ h2 {
   justify-content: center;
 }
 
-/* Zminimalizowane portfolio */
+/* Portfolio */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -76,6 +76,7 @@ h2 {
   transition: transform 0.3s ease;
 }
 
+/* Opinie */
 .opinie {
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(6px);
@@ -97,6 +98,7 @@ h2 {
   margin-top: 15px;
 }
 
+/* Stopka */
 footer {
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(4px);
@@ -108,25 +110,7 @@ footer {
   margin: 20px;
 }
 
-.contact-link {
-  text-align: center;
-  font-size: 1.1em;
-}
-
-.contact-link a {
-  display: inline-block;
-  background-color: #3fb7e3;
-  color: white;
-  text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-}
-
-.contact-link a:hover {
-  background-color: #309cc7;
-}
-
+/* Messenger button */
 .messenger-button {
   position: fixed;
   bottom: 20px;
@@ -148,7 +132,7 @@ footer {
   border-radius: 50%;
 }
 
-/* MODAL (powiększanie zdjęć w portfolio) */
+/* Modal do powiększenia zdjęcia */
 .modal {
   display: none;
   position: fixed;
@@ -171,4 +155,47 @@ footer {
 
 .modal:target {
   display: flex;
+}
+
+/* Sekcja kontakt */
+.contact-box {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-text {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #2c2c2c;
+}
+
+.contact-cta {
+  display: inline-flex;
+  align-items: center;
+  background-color: #0084ff;
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-cta:hover {
+  background-color: #006fd6;
+}
+
+.contact-icon {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
 }
