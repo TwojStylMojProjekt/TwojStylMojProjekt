@@ -110,7 +110,57 @@ footer {
   margin: 20px;
 }
 
-/* Messenger button */
+/* Sekcja kontakt */
+.contact-box {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-text {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #2c2c2c;
+}
+
+.contact-btn-wrapper {
+  display: inline-block;
+}
+
+.contact-cta {
+  display: inline-flex;
+  align-items: center;
+  background-color: #0084ff;
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  max-width: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+.contact-cta:hover {
+  background-color: #006fd6;
+}
+
+.contact-icon {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+}
+
+/* Przycisk Messenger */
 .messenger-button {
   position: fixed;
   bottom: 20px;
@@ -132,7 +182,7 @@ footer {
   border-radius: 50%;
 }
 
-/* Modal do powiększenia zdjęcia */
+/* Modal – powiększanie zdjęć */
 .modal {
   display: none;
   position: fixed;
@@ -155,47 +205,4 @@ footer {
 
 .modal:target {
   display: flex;
-}
-
-/* Sekcja kontakt */
-.contact-box {
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  padding: 40px 20px;
-  text-align: center;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.contact-text {
-  font-size: 1.1em;
-  margin-bottom: 20px;
-  font-weight: 500;
-  color: #2c2c2c;
-}
-
-.contact-cta {
-  display: inline-flex;
-  align-items: center;
-  background-color: #0084ff;
-  color: #fff;
-  padding: 14px 24px;
-  border-radius: 30px;
-  font-size: 1em;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.contact-cta:hover {
-  background-color: #006fd6;
-}
-
-.contact-icon {
-  width: 22px;
-  height: 22px;
-  margin-right: 10px;
 }
