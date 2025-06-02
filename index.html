@@ -57,14 +57,13 @@
     </div>
   </section>
 
-  <section class="opinie" id="opinie">
-    <h2>Opinie klientów</h2>
-    <form onsubmit="dodajOpinie(event)">
-      <input type="text" id="imie" placeholder="Twoje imię" required>
-      <textarea id="opinia" rows="4" placeholder="Twoja opinia" required></textarea>
-      <button type="submit">Dodaj opinię</button>
-    </form>
-    <div class="opinie-list" id="opinie-list"></div>
+  <section id="projekty">
+    <h2>Zrealizowane Projekty</h2>
+    <div class="projekty-grid">
+      <div class="projekt-box"><img src="projekt1.png" alt="Projekt 1" onclick="powieksz(this)"></div>
+      <div class="projekt-box"><img src="projekt2.png" alt="Projekt 2" onclick="powieksz(this)"></div>
+      <div class="projekt-box"><img src="projekt3.png" alt="Projekt 3" onclick="powieksz(this)"></div>
+    </div>
   </section>
 
   <footer>
@@ -80,25 +79,10 @@
   </div>
 
   <script>
-    function dodajOpinie(event) {
-      event.preventDefault();
-      const imie = document.getElementById('imie').value;
-      const opinia = document.getElementById('opinia').value;
-      if (!imie || !opinia) return;
-      const nowaOpinia = document.createElement('div');
-      nowaOpinia.className = 'opinie-item';
-      nowaOpinia.innerHTML = `<strong>${imie}</strong><p>${opinia}</p>`;
-      document.getElementById('opinie-list').prepend(nowaOpinia);
-      document.getElementById('imie').value = '';
-      document.getElementById('opinia').value = '';
+    function powieksz(img) {
+      document.getElementById('popup-img').src = img.src;
+      document.getElementById('popup').style.display = 'flex';
     }
-
-    document.querySelectorAll('.box img').forEach(img => {
-      img.onclick = () => {
-        document.getElementById('popup-img').src = img.src;
-        document.getElementById('popup').style.display = 'flex';
-      };
-    });
   </script>
 </body>
 </html>
