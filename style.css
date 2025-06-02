@@ -76,38 +76,23 @@ h2 {
   transition: transform 0.3s ease;
 }
 
-/* Opinie */
-.opinie {
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  padding: 40px 20px;
-  border-radius: 16px;
+/* Projekty – nowa sekcja */
+.projekty-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
-.opinie form, .opinie-list {
-  max-width: 600px;
-  margin: 20px auto;
+.projekt-box img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
 }
 
-.opinie-item {
-  background: #ffffff;
-  padding: 15px;
-  border: 1px solid #c2e3f3;
-  border-radius: 8px;
-  margin-top: 15px;
-}
-
-/* Stopka */
-footer {
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-  border-radius: 16px;
-  margin: 20px;
+.projekt-box img:hover {
+  transform: scale(1.02);
 }
 
 /* Sekcja kontakt */
@@ -158,6 +143,18 @@ footer {
   width: 22px;
   height: 22px;
   margin-right: 10px;
+}
+
+/* Stopka */
+footer {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  border-radius: 16px;
+  margin: 20px;
 }
 
 /* Przycisk Messenger */
