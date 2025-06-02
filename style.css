@@ -1,92 +1,167 @@
+html {
+  scroll-behavior: smooth;
+}
 
-/* Ogólne */
 body {
   margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, sans-serif;
   background-image: url('tlo.png');
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  color: #000;
+  color: #222;
 }
 
-/* Nagłówki */
-h1, h2, h3 {
-  margin: 0.5em 0;
+header {
+  background: linear-gradient(to right, #72cbe5, #d8f0ff);
   text-align: center;
+  padding: 0;
 }
 
-/* Sekcje */
-section {
-  padding: 20px;
-  margin: 10px auto;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 12px;
-  max-width: 600px;
-}
-
-/* Przycisk */
-button, .cta-button {
-  background-color: #1C6EA4;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Portfolio - dwa rzędy */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.portfolio-grid img {
+header img {
   width: 100%;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+  max-width: 1000px;
+  height: auto;
+  display: block;
+  margin: auto;
 }
 
-.portfolio-grid img:hover {
-  transform: scale(1.05);
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 20px auto;
+  background: rgba(191, 226, 236, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
 }
 
-/* Opinie */
-#opinie {
+h2 {
+  color: #3a9dc4;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.services, .portfolio-grid {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  loading: lazy;
+  cursor: zoom-in;
+}
+
+.opinie {
+  background-color: rgba(191, 226, 236, 0.95);
+  padding: 40px 20px;
+  border-radius: 16px;
+}
+
+.opinie form, .opinie-list {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.opinie-item {
+  background: #ffffff;
+  padding: 15px;
+  border: 1px solid #c2e3f3;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+footer {
+  background: rgba(198, 234, 246, 0.9);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  border-radius: 16px;
+  margin: 20px;
+}
+
+.contact-link {
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.contact-link a {
+  display: inline-block;
+  background-color: #3fb7e3;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-link a:hover {
+  background-color: #309cc7;
+}
+
+.messenger-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0084ff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.messenger-button img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* MODAL (powiększanie zdjęć w portfolio) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
   align-items: center;
 }
 
-.opinia {
-  background: white;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
-  width: 90%;
-  max-width: 500px;
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
 }
 
-form input, form textarea {
-  width: 100%;
-  padding: 8px;
-  margin: 8px 0;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-/* Responsywność */
-@media (max-width: 600px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
+.modal:target {
+  display: flex;
 }
