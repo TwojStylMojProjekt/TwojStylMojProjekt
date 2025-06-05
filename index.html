@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Twój Styl Mój Projekt</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <section id="trailer">
-    <video width="100%" height="auto" controls autoplay muted playsinline style="border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); display:block; margin:0 auto;">
-      <source src="trailer.mp4" type="video/mp4" />
-      Twoja przeglądarka nie obsługuje odtwarzania wideo.
-    </video>
-  </section>
-
-  <section id="o-mnie">
-    <h2>O mnie</h2>
-    <div class="services">
-      <div class="box">
-        <p>Specjalizuję się w tworzeniu unikalnych projektów graficznych: logo, banerów, reklam i całej identyfikacji wizualnej. Łączę Twoją wizję z moim warsztatem.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="uslugi">
+<section id="uslugi">
     <h2>Usługi</h2>
     <div class="uslugi-grid">
       <div class="usluga">
@@ -54,6 +28,12 @@
       <div class="box"><img src="portfolio3.png" alt="Budowa"></div>
       <div class="box"><img src="portfolio4.png" alt="Flota DAF"></div>
       <div class="box"><img src="portfolio5.png" alt="Chwytak"></div>
+      <div class="box"><img src="portfolio.png" alt="DAF" onclick="powieksz(this)"></div>
+      <div class="box"><img src="portfolio1.png" alt="Złom" onclick="powieksz(this)"></div>
+      <div class="box"><img src="portfolio2.png" alt="Scania" onclick="powieksz(this)"></div>
+      <div class="box"><img src="portfolio3.png" alt="Budowa" onclick="powieksz(this)"></div>
+      <div class="box"><img src="portfolio4.png" alt="Flota DAF" onclick="powieksz(this)"></div>
+      <div class="box"><img src="portfolio5.png" alt="Chwytak" onclick="powieksz(this)"></div>
     </div>
   </section>
 
@@ -78,24 +58,3 @@
       <div class="projekt-box"><img src="projekt3.png" alt="Projekt 3" onclick="powieksz(this)"></div>
     </div>
   </section>
-
-  <footer>
-    &copy; 2025 Twój Styl Mój Projekt. Wszystkie prawa zastrzeżone.
-  </footer>
-
-  <a href="https://m.me/61575868348459" class="messenger-button" target="_blank">
-    <img src="messenger-icon.png" alt="Messenger">
-  </a>
-
-  <div id="popup" class="modal" onclick="this.style.display='none'">
-    <img id="popup-img" src="" alt="Powiększona grafika">
-  </div>
-
-  <script>
-    function powieksz(img) {
-      document.getElementById('popup-img').src = img.src;
-      document.getElementById('popup').style.display = 'flex';
-    }
-  </script>
-</body>
-</html>
