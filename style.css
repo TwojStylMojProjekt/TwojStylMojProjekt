@@ -4,33 +4,21 @@ html {
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-image: url('tlo.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  color: #222;
-}
-
-header {
-  background: linear-gradient(to right, #72cbe5, #d8f0ff);
-  text-align: center;
-  padding: 0;
-}
-
-header img {
-  width: 100%;
-  max-width: 1000px;
-  height: auto;
-  display: block;
-  margin: auto;
+  color: #1a1a1a;
+  font-size: 17px;
+  line-height: 1.6;
 }
 
 section {
   padding: 60px 20px;
   max-width: 1100px;
-  margin: 20px auto;
+  margin: 40px auto;
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -38,10 +26,17 @@ section {
   box-shadow: 0 3px 8px rgba(0,0,0,0.05);
 }
 
-h2 {
-  color: #3a9dc4;
+.section-heading {
+  color: #2a8ab8;
   text-align: center;
+  font-size: 2rem;
   margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.main-text {
+  font-size: 1.1em;
+  color: #333;
 }
 
 .services {
@@ -51,75 +46,97 @@ h2 {
   justify-content: center;
 }
 
-/* Nowa sekcja Usługi */
 .uslugi-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
   text-align: center;
 }
 
 .usluga {
-  padding: 20px;
+  padding: 24px;
   border-radius: 16px;
-  background: rgba(255,255,255,0.3);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.3s ease;
 }
 
 .usluga:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
 }
 
 .usluga img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 12px;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 16px;
 }
 
 .usluga h3 {
-  font-size: 1.2em;
+  font-size: 1.25em;
   margin: 0 0 10px;
   color: #1976d2;
 }
 
 .usluga p {
-  font-size: 0.95em;
-  color: #333;
+  font-size: 1em;
+  color: #2b2b2b;
 }
 
 /* Portfolio */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 20px;
   padding: 0 10px;
   justify-content: center;
 }
 
-.box {
-  background: transparent;
-  padding: 0;
-  border-radius: 0;
-  box-shadow: none;
-}
-
 .box img {
   width: 100%;
-  max-height: 140px;
+  max-height: 160px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: zoom-in;
   transition: transform 0.3s ease;
 }
 
-/* Projekty – nowa sekcja */
+.box img:hover {
+  transform: scale(1.02);
+}
+
+/* Opinie klientów */
+.opinie-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.opinia-box {
+  background: rgba(255,255,255,0.7);
+  border-left: 4px solid #4caf50;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-style: italic;
+  color: #222;
+}
+
+.opinia-box span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9em;
+  font-style: normal;
+  color: #555;
+}
+
+/* Projekty */
 .projekty-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 20px;
 }
 
 .projekt-box img {
@@ -138,7 +155,6 @@ h2 {
 .contact-box {
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
   padding: 40px 20px;
   text-align: center;
   border-radius: 20px;
@@ -148,9 +164,9 @@ h2 {
 }
 
 .contact-text {
-  font-size: 1.1em;
+  font-size: 1.2em;
   margin-bottom: 20px;
-  font-weight: 500;
+  font-weight: 600;
   color: #2c2c2c;
 }
 
@@ -170,8 +186,6 @@ h2 {
   text-decoration: none;
   transition: background-color 0.3s ease;
   max-width: 100%;
-  z-index: 1;
-  position: relative;
 }
 
 .contact-cta:hover {
@@ -179,8 +193,8 @@ h2 {
 }
 
 .contact-icon {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   margin-right: 10px;
 }
 
@@ -188,7 +202,6 @@ h2 {
 footer {
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
   text-align: center;
   padding: 20px;
   font-size: 0.9em;
@@ -196,7 +209,7 @@ footer {
   margin: 20px;
 }
 
-/* Przycisk Messenger */
+/* Messenger */
 .messenger-button {
   position: fixed;
   bottom: 20px;
@@ -218,7 +231,7 @@ footer {
   border-radius: 50%;
 }
 
-/* Modal – powiększanie zdjęć */
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -237,8 +250,4 @@ footer {
   max-height: 90%;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(255,255,255,0.2);
-}
-
-.modal:target {
-  display: flex;
 }
