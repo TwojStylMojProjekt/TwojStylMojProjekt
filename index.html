@@ -9,23 +9,23 @@
 <body>
 
   <section id="trailer">
-    <video width="100%" height="auto" controls autoplay muted playsinline style="border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); display:block; margin:0 auto;">
+    <video width="100%" height="auto" controls autoplay muted playsinline style="border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); display:block; margin:2rem auto;">
       <source src="trailer.mp4" type="video/mp4" />
       Twoja przeglądarka nie obsługuje odtwarzania wideo.
     </video>
   </section>
 
   <section id="o-mnie">
-    <h2>O mnie</h2>
+    <h2 class="section-heading">O mnie</h2>
     <div class="services">
       <div class="box">
-        <p>Specjalizuję się w tworzeniu unikalnych projektów graficznych: logo, banerów, reklam i całej identyfikacji wizualnej. Łączę Twoją wizję z moim warsztatem.</p>
+        <p class="main-text">Specjalizuję się w tworzeniu unikalnych projektów graficznych: logo, banerów, reklam i całej identyfikacji wizualnej. Łączę Twoją wizję z moim warsztatem.</p>
       </div>
     </div>
   </section>
 
   <section id="uslugi">
-    <h2>Usługi</h2>
+    <h2 class="section-heading">Usługi</h2>
     <div class="uslugi-grid">
       <div class="usluga">
         <img src="ikonka-www.png" alt="Strony WWW">
@@ -46,19 +46,31 @@
   </section>
 
   <section id="portfolio">
-    <h2>Portfolio</h2>
+    <h2 class="section-heading">Portfolio</h2>
     <div class="portfolio-grid">
-      <div class="box"><img src="portfolio.png" alt="DAF"></div>
-      <div class="box"><img src="portfolio1.png" alt="Złom"></div>
-      <div class="box"><img src="portfolio2.png" alt="Scania"></div>
-      <div class="box"><img src="portfolio3.png" alt="Budowa"></div>
-      <div class="box"><img src="portfolio4.png" alt="Flota DAF"></div>
-      <div class="box"><img src="portfolio5.png" alt="Chwytak"></div>
+      <div class="box"><img src="portfolio.png" alt="DAF" onclick="powieksz(this)"></div>
+      <div class="box"><img src="portfolio1.png" alt="Złom" onclick="powieksz(this)"></div>
+      <div class="box"><img src="portfolio2.png" alt="Scania" onclick="powieksz(this)"></div>
+      <div class="box"><img src="portfolio3.png" alt="Budowa" onclick="powieksz(this)"></div>
+      <div class="box"><img src="portfolio4.png" alt="Flota DAF" onclick="powieksz(this)"></div>
+      <div class="box"><img src="portfolio5.png" alt="Chwytak" onclick="powieksz(this)"></div>
+    </div>
+  </section>
+
+  <section id="opinie">
+    <h2 class="section-heading">Opinie klientów</h2>
+    <div class="opinie-wrapper">
+      <!-- Przykładowa opinia -->
+      <div class="opinia-box">
+        <p>"Świetna robota! Szybko, profesjonalnie i z klasą – na pewno wrócę!"</p>
+        <span>– Marta, właścicielka salonu beauty</span>
+      </div>
+      <!-- Tu pojawią się inne opinie z JSON -->
     </div>
   </section>
 
   <section id="kontakt">
-    <h2>Kontakt</h2>
+    <h2 class="section-heading">Kontakt</h2>
     <div class="contact-box">
       <p class="contact-text">Potrzebujesz projektu graficznego?<br>Zrealizuję go w 24h – napisz teraz:</p>
       <div class="contact-btn-wrapper">
@@ -71,7 +83,7 @@
   </section>
 
   <section id="projekty">
-    <h2>Zrealizowane Projekty</h2>
+    <h2 class="section-heading">Zrealizowane Projekty</h2>
     <div class="projekty-grid">
       <div class="projekt-box"><img src="projekt1.png" alt="Projekt 1"></div>
       <div class="projekt-box"><img src="projekt2.png" alt="Projekt 2"></div>
