@@ -57,18 +57,6 @@
     </div>
   </section>
 
-  <section id="opinie">
-    <h2 class="section-heading">Opinie klientów</h2>
-    <div class="opinie-wrapper">
-      <!-- Przykładowa opinia -->
-      <div class="opinia-box">
-        <p>"Świetna robota! Szybko, profesjonalnie i z klasą – na pewno wrócę!"</p>
-        <span>– Marta, właścicielka salonu beauty</span>
-      </div>
-      <!-- Tu pojawią się inne opinie z JSON -->
-    </div>
-  </section>
-
   <section id="kontakt">
     <h2 class="section-heading">Kontakt</h2>
     <div class="contact-box">
@@ -99,7 +87,7 @@
     <img src="messenger-icon.png" alt="Messenger">
   </a>
 
-  <div id="popup" class="modal" onclick="this.style.display='none'">
+  <div id="popup" class="modal">
     <img id="popup-img" src="" alt="Powiększona grafika">
   </div>
 
@@ -108,6 +96,13 @@
       document.getElementById('popup-img').src = img.src;
       document.getElementById('popup').style.display = 'flex';
     }
+
+    document.addEventListener('click', function (e) {
+      const modal = document.getElementById('popup');
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
   </script>
 </body>
 </html>
