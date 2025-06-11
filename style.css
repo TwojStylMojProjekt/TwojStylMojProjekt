@@ -88,18 +88,17 @@ section {
   color: #2b2b2b;
 }
 
-/* Portfolio */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 0 10px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 14px;
+  padding: 0 6px;
   justify-content: center;
 }
 
 .box img {
-  width: 100%;
-  max-height: 100px; /* ⬅️ mniejsze miniaturki */
+  width: 90%;
+  max-height: 80px; /* ⬅️ mniejsze miniaturki */
   object-fit: cover;
   border-radius: 12px;
   cursor: zoom-in;
