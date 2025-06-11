@@ -102,10 +102,12 @@
     function powieksz(img) {
       document.getElementById('popup-img').src = img.src;
       document.getElementById('popup').style.display = 'flex';
+      history.pushState({ popup: true }, "", "#popup");
     }
 
     function zamknijPopup() {
       document.getElementById('popup').style.display = 'none';
+      if (location.hash === "#popup") history.back();
     }
 
     document.addEventListener('click', function (e) {
@@ -119,6 +121,10 @@
       if (e.key === 'Escape' || e.key === 'Backspace') {
         zamknijPopup();
       }
+    });
+
+    window.addEventListener("popstate", function (e) {
+      zamknijPopup();
     });
   </script>
 </body>
