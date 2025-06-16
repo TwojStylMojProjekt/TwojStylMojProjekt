@@ -4,7 +4,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Manrope', sans-serif;
   background-image: url('tlo.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -41,7 +41,7 @@ section {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 30px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .main-text {
@@ -155,37 +155,34 @@ section {
 .contact-box {
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(6px);
-  padding: 40px 20px;
+  padding: 30px 20px;
   text-align: center;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  max-width: 600px;
+  max-width: 380px;
   margin: 0 auto;
 }
 
 .contact-text {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  font-weight: 600;
-  color: #2c2c2c;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
 }
 
 .contact-btn-wrapper {
   display: inline-block;
+  margin-top: 20px;
 }
 
 .contact-cta {
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
   background-color: #0084ff;
   color: #fff;
-  padding: 14px 24px;
+  padding: 12px 24px;
   border-radius: 30px;
-  font-size: 1em;
-  font-weight: bold;
+  font-size: 15px;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  max-width: 100%;
 }
 
 .contact-cta:hover {
@@ -195,7 +192,8 @@ section {
 .contact-icon {
   width: 24px;
   height: 24px;
-  margin-right: 10px;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 /* Stopka */
