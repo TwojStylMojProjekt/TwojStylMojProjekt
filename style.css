@@ -140,7 +140,6 @@ section {
   transform: scale(1.02);
 }
 
-/* Nowa grafika pokazowa do sekcji #projekty */
 #projekty img {
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
@@ -153,8 +152,9 @@ section {
 
 /* Sekcja kontakt */
 .contact-box {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   padding: 30px 20px;
   text-align: center;
   border-radius: 20px;
