@@ -11,6 +11,28 @@
       user-select: none;
       pointer-events: none;
     }
+    .messenger-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      z-index: 1000;
+      background-color: transparent;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+    .messenger-button:hover {
+      transform: scale(1.1);
+    }
+    .messenger-button img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
   </style>
 </head>
 <body oncontextmenu="return false;">
