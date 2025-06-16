@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Twój Styl Mój Projekt</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
   <style>
     img, video {
       -webkit-user-drag: none;
@@ -35,7 +36,7 @@
     }
   </style>
 </head>
-<body oncontextmenu="return false;">
+<body oncontextmenu="return false;" style="font-family: 'Manrope', sans-serif;">
 
   <script>
     document.addEventListener('contextmenu', event => event.preventDefault());
@@ -106,19 +107,16 @@
 
   <section id="kontakt">
     <h2 class="section-heading">Kontakt</h2>
-    <div class="contact-box">
-      <p class="contact-text">
+    <div class="contact-box" style="max-width: 380px; margin: 0 auto; text-align: center; background: #ffffffdd; padding: 30px 20px; border-radius: 16px;">
+      <p style="font-size: 15px; color: #333; line-height: 1.6;">
         Masz pomysł na stronę internetową?<br>
         Potrzebujesz baneru, logo lub reklamy do social mediów?<br>
-        Zamień swoją wizję w profesjonalny projekt – napisz, a ja zajmę się resztą.<br>
-        <strong>Realizacja w 24h.</strong>
+        Zamień swoją wizję w profesjonalny projekt – napisz, a ja zajmę się resztą.
       </p>
-      <div class="contact-btn-wrapper">
-        <a href="https://m.me/61575868348459" target="_blank" class="contact-cta">
-          <img src="messenger-icon.webp" alt="Messenger" class="contact-icon" draggable="false">
-          Napisz do nas !
-        </a>
-      </div>
+      <p style="margin-top: 10px; color: #2280c5; font-size: 15px;">Realizacja w 24h</p>
+      <a href="https://m.me/61575868348459" target="_blank" class="contact-cta" style="margin-top: 20px; display: inline-block; background: #0084ff; color: #fff; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-size: 15px;">
+        Messenger
+      </a>
     </div>
   </section>
 
